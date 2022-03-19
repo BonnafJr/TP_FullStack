@@ -68,7 +68,10 @@
          fetch(url.target.value)
              .then(response => response.json())
              .then((json )=> {
-                for(let i=0;i<hookVille.length +1;i++){
+                let l=hookVille.length
+                for(let i=0;i<l;i++){
+                    console.log("LONGUEUR", hookVille.length)
+                    console.log("i: ",i)
                     hookVille.pop()
                 }
                  json._embedded.cities.forEach((v)=>{hookVille.push(v)})
